@@ -1,14 +1,14 @@
-import _ from 'lodash';
+import _ from "lodash";
 
 export const getFeaturedSong = (songbook, allSongs) => {
   if (songbook && allSongs && allSongs.length && songbook.chapters) {
     let featuredSongs = [];
-    songbook.chapters.forEach(chapter => {
-      chapter.songs.forEach(songChild => {
+    songbook.chapters.forEach((chapter) => {
+      chapter.songs.forEach((songChild) => {
         if (songChild.featured) {
           // does this song id exist in the songs list
           featuredSongs.push(
-            allSongs.filter(song => song._id === songChild._id)[0]
+            allSongs.filter((song) => song._id === songChild._id)[0]
           );
         }
       });
@@ -37,6 +37,6 @@ const DEFAULT_SONG = {
   reference_link: '',
   instructions: '',
   playerId: -1,
-  override_html: '',
-  delete_local: ''
+  override_html: "",
+  delete_local: "",
 };

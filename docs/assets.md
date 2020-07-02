@@ -1,6 +1,6 @@
 # Hooligan Hymnal Assets Guide
 
-This document describes the photos, graphics, and fonts that may be used by your supporter group's customized version of the open source Hooligan Hymnal mobile app. It is intended to supplement the deployment instructions found in `deployment.md`, and is spefically targeted to graphic designers or others who are tasked to create or collect these assets, in an effort to avoid overwhelming them with instructions on server setup and app publishing and so on.
+This document describes the photos, graphics, and fonts that may be used by your supporter group's customized version of the open source Hooligan Hymnal mobile app. It is intended to supplement the instructions found in our [Deployment Guide](_deployment.md), and is spefically targeted to graphic designers or others who are tasked to create or collect these assets, in an effort to avoid overwhelming them with instructions on server setup and app publishing and so on.
 
 We also recommend opening `config-example.js` as a companion to this guide. The file contains additional documentation, descriptions, and examples that aim to make life easier overall.
 
@@ -18,6 +18,7 @@ Hooligan Hymnal is an open source project, and your developers may have grander 
 Most files are named for a generic purpose. `/assets/icon-ios.png` is the app icon used on iOS, `/assets/splash.png` is the splash screen displayed on the initial application load, and so on. These files are referenced in the `config.js` file. You can use these same file names without needing to change the config, or you can set your own file names, and easily edit the config file to match. There may (will) be cases where you need to add files that aren't part of the basic set.
 
 The `config.js` file declares a `Skin` that is used throughout the code, and it refers to several other structures, which are outlined in this overly-simplified illustration. (Though Skin is further customizable if our example config doesn't meet the needs of your SG. Just ask in Slack.)
+
 ```
 Skin
 ├── Images
@@ -67,7 +68,7 @@ Hooligan Hymnal uses a number of photos, logos, and custom images. This section 
 
 ## Icons
 
-Default file name(s): `icon-android.png` and  `icon-ios.png`
+Default file name(s): `icon-android.png` and `icon-ios.png`
 
 The iOS launcher icon should be a png file sized to exactly 1024x1024 and fill the entire square, with no transparent pixels.
 The Android launcher supports adaptive icons, but that effort was not spent in the initial deployment of Hooligan Hymnal. We used a 1024x1024px png, balanced to fit in a circle, with a transparent background.
@@ -96,6 +97,10 @@ Default file name(s): `home-hero-video.mp4` and `home-hero-video-overlay.png`
 
 The default implementation of the hero component is an incredibly low-resolution video with no sound. Target 1-5MB. (Yes, that small and shitty, because it's going to be covered up.) The hero video is displayed under a semitransparent tint and an overlay image- we recommend your SG logo with a transparent background.
 
+The overlay image is displayed at a fixed size and may require some iteration to look adequate on a variety of screen sizes. We recommend starting out by cropping the image tightly to the logo, seeing how it looks, and adding padding as necessary. It may require some fiddling, and I'm sorry about the current approach.(\*TODO: This is much improved, but still suboptimal as of 2.0.0. Tracked at <https://github.com/Chattahooligans/hooligan-hymnal-app/issues/134>)
+
+(\*TODO: The overlay logo implementation is suboptimal as of v2.0.0. Plans for improvement are tracked at <https://github.com/Chattahooligans/hooligan-hymnal-app/issues/134>)
+
 ### Image
 
 Default file name(s): `home-hero-image.png`
@@ -119,6 +124,10 @@ The Home Hero component fades into a standard looking header/navigation bar as t
 Default file name(s): `drawer-hero-background.png` and `drawer-hero-overlay.png`
 
 The menu drawer contains an image at the top. Like the Home Hero Video, this image is displayed under semitransparent tint and an overlay logo image with transparent background. You can use a photo, digital graphic, or solid color image.
+
+\*The hero background image is displayed at, and contained to, a fixed height based on `config.js:Skin.NavigationDrawer_HeroBackgroundHeight`. There are two strategies for designing the overlay logo image: Leaving plenty of space around the logo and setting `config.js:Skin.NavigationDrawer_HeroOverlayHeightProportion` to a proportion of or near 1, or cropping tightly around the logo and setting that value to some value much less than 1. It may require some fiddling in the config to look nice, and I'm sorry about the current approach.
+
+(\*TODO: This is much improved, but still suboptimal as of v2.0.0. Tracked at <https://github.com/Chattahooligans/hooligan-hymnal-app/issues/134>)
 
 ## Songbook Cover
 

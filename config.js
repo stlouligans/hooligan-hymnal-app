@@ -1,6 +1,8 @@
 // Do not edit these import lines
 import appParams from './app.json';
 import i18n from "./src/i18n";
+import { Layout } from "./src/constants";
+
 
 /*
   Hooligan Hymnal
@@ -273,9 +275,11 @@ export const Skin = {
   ModalLoader_Container: "#00000040",
   NavigationDrawer_BackgroundColor: "#333333",
   NavigationDrawer_HeroBackground: Images.NavigationDrawer_HeroBackground,
+  NavigationDrawer_HeroBackgroundHeight: 140 + Layout.notchHeight,
   NavigationDrawer_HeroOverlay: Images.NavigationDrawer_HeroOverlay,
-  NavigationDrawer_HeroOverlayTintColor: DefaultColors.HeaderBackground,
-  NavigationDrawer_HeroOverlayTintOpacity: 0.5,
+  NavigationDrawer_HeroOverlayHeightProportion: 0.4,
+  NavigationDrawer_HeroTintColor: DefaultColors.HeaderBackground,
+  NavigationDrawer_HeroTintOpacity: 0.5,
   NavigationDrawer_LabelActiveBackgroundColor: DefaultColors.Primary,
   NavigationDrawer_LabelActiveTintColor: Palette.White,
   NavigationDrawer_LabelActiveBackgroundColor: 'transparent',
