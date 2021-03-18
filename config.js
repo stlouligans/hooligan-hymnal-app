@@ -47,7 +47,7 @@ export const Urls = {
   //HooliganHymnalServer: 'https://EDIT-THIS-URL.herokuapp.com',
 
   // Social media and websites
-  Twitter: "https://twitter.com/hooliganhymnal",
+  Twitter: "https://twitter.com/StLouligans",
   Facebook: "https://facebook.com/",
   Instagram: "https://instagram.com/",
   Website: "http://example.com",
@@ -168,7 +168,7 @@ export const CommonImageCredits = [
   Feel free to add or remove lines as necessary to suit your needs.
 */
 export const Palette = {
-  Navy: "#002D56",
+  Navy: "#02631C",
   Sky: "#A3D8F7",
   White: "#FFFFFF",
   Black: "#000000",
