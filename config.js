@@ -48,11 +48,11 @@ export const Urls = {
 
   // Social media and websites
   Twitter: "https://twitter.com/StLouligans",
-  Facebook: "https://facebook.com/",
+  Facebook: "https://www.facebook.com/stlouligans",
   Instagram: "https://instagram.com/",
-  Website: "http://example.com",
+  Website: "https://stlouligans.com",
   YouTube: "https://youtube.com",
-  Shop: "http://example.com/shop",
+  Shop: "https://stlouligans.com/shop",
   Prideraiser: "https://prideraiser.org/",
   // Look for random characters at the end of your current campaign url (must update for each campaign season)
   PrideraiserCampaignId: "xxxxxxx",
@@ -168,8 +168,8 @@ export const CommonImageCredits = [
   Feel free to add or remove lines as necessary to suit your needs.
 */
 export const Palette = {
-  Navy: "#02631C",
-  Sky: "#A3D8F7",
+  Navy: "#02631C", //our green
+  Sky: "#0F1E3E", // our navy
   White: "#FFFFFF",
   Black: "#000000",
 
