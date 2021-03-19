@@ -401,6 +401,11 @@ export const NavigationDrawerItems = [
     drawerIcon: "menu-swap",
     url: Urls.Standings,
   },
+  {
+    drawerLabel: i18n.t("navigation.links.shop"),
+    drawerIcon: "shopping",
+    url: Urls.Shop,
+  },
 ];
 
 /*
