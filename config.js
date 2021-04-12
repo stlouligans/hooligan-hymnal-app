@@ -56,12 +56,12 @@ export const Urls = {
   Prideraiser: "https://prideraiser.org/",
   // Look for random characters at the end of your current campaign url (must update for each campaign season)
   PrideraiserCampaignId: "xxxxxxx",
-  EsTwitter: "https://twitter.com/hooliganhymmnal",
-  EsFacebook: "https://facebook.com/",
-  EsInstagram: "https://instagram.com/",
-  EsWebsite: "http://example.com/es",
-  Events: "http://example.com/shop",
-  Standings: "https://www.nisaofficial.com/standings",
+  // EsTwitter: "https://twitter.com/hooliganhymmnal",
+  // EsFacebook: "https://facebook.com/",
+  // EsInstagram: "https://instagram.com/",
+  // EsWebsite: "http://example.com/es",
+  // Events: "http://example.com/shop",
+  Standings: "https://www.uslleaguetwo.com/league-standings",
 
   // Add additional Urls (optional)
   /* 
