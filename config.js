@@ -173,7 +173,7 @@ export const CommonImageCredits = [
   Feel free to add or remove lines as necessary to suit your needs.
 */
 export const Palette = {
-  Navy: "#02631C", //our green
+  Navy: "#E51550", //our pink
   Sky: "#0F1E3E", // our navy
   White: "#FFFFFF",
   Black: "#000000",
