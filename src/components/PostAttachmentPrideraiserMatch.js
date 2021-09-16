@@ -18,8 +18,6 @@ export default class PostAttachmentPrideraiserMatch extends React.Component {
     let message = "";
 
     if (data) {
-      console.log(data);
-
       // data.campaign contains a subset of campaign data baked in
       heading = formatStringWithCampaignProps(
         i18n.t("components.postattachmentprideraisermatch.heading"),
@@ -39,7 +37,7 @@ export default class PostAttachmentPrideraiserMatch extends React.Component {
           data.goalCount
         );
         message = message.replace("%goalCount%", data.goalCount);
-        message = message.replace("%raised%", raised);
+        message = message.replace("%raised%", raised.toFixed(2));
       } else {
         message = formatStringWithCampaignProps(
           i18n.t("components.postattachmentprideraisermatch.messagezerogoals"),
