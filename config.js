@@ -47,21 +47,21 @@ export const Urls = {
   //HooliganHymnalServer: 'https://EDIT-THIS-URL.herokuapp.com',
 
   // Social media and websites
-  Twitter: "https://twitter.com/hooliganhymnal",
-  Facebook: "https://facebook.com/",
+  Twitter: "https://twitter.com/StLouligans",
+  Facebook: "https://www.facebook.com/stlouligans",
   Instagram: "https://instagram.com/",
-  Website: "http://example.com",
+  Website: "https://stlouligans.com",
   YouTube: "https://youtube.com",
-  Shop: "http://example.com/shop",
+  Shop: "https://stlouligans.com/shop",
   Prideraiser: "https://prideraiser.org/",
   // Look for random characters at the end of your current campaign url (must update for each campaign season)
   PrideraiserCampaignId: "xxxxxxx",
-  EsTwitter: "https://twitter.com/hooliganhymmnal",
-  EsFacebook: "https://facebook.com/",
-  EsInstagram: "https://instagram.com/",
-  EsWebsite: "http://example.com/es",
-  Events: "http://example.com/shop",
-  Standings: "https://www.nisaofficial.com/standings",
+  // EsTwitter: "https://twitter.com/hooliganhymmnal",
+  // EsFacebook: "https://facebook.com/",
+  // EsInstagram: "https://instagram.com/",
+  // EsWebsite: "http://example.com/es",
+  // Events: "http://example.com/shop",
+  Standings: "https://www.uslleaguetwo.com/league-standings",
 
   // Add additional Urls (optional)
   /* 
@@ -125,6 +125,11 @@ export const Images = {
   // Potentially used in Banners and SocialButtons
   GoFundMe: require("./assets/gofundme.png"),
 
+  // Hooligan Hymnal platform logo, used on About screen
+  HooliganHymnalLogoSingleColor: require("./assets/about/hooligan-hymnal-full.png"),
+  HooliganHymnalLogoLayer1: require("./assets/about/hooligan-hymnal-layer1.png"),
+  HooliganHymnalLogoLayer2: require("./assets/about/hooligan-hymnal-layer2.png"),
+
   // Add additional images (optional)
   /* 
 
@@ -168,8 +173,8 @@ export const CommonImageCredits = [
   Feel free to add or remove lines as necessary to suit your needs.
 */
 export const Palette = {
-  Navy: "#002D56",
-  Sky: "#A3D8F7",
+  Navy: "#02631C", //our green
+  Sky: "#0F1E3E", // our navy
   White: "#FFFFFF",
   Black: "#000000",
 
@@ -255,6 +260,11 @@ export const Fonts = {
 */
 export const Skin = {
   About_BackgroundColor: DefaultColors.Secondary,
+  About_HooliganHymnalLogoSingleColor: Images.HooliganHymnalLogoSingleColor,
+  About_HooliganHymnalLogoLayer1: Images.HooliganHymnalLogoLayer1,
+  About_HooliganHymnalLogoLayer1Tint: DefaultColors.Primary,
+  About_HooliganHymnalLogoLayer2: Images.HooliganHymnalLogoLayer2,
+  About_HooliganHymnalLogoLayer2Tint: DefaultColors.Secondary,
   Font_Light: Fonts.Light.family,
   Font_Regular: Fonts.Regular.family,
   Font_Medium: Fonts.Medium.family,
@@ -289,6 +299,7 @@ export const Skin = {
   Home_Website: DefaultColors.BlackText,
   Icon_Roster: "account-group",
   Icon_Songbook: "book-open-variant",
+  InstagramList_BackgroundColor: DefaultColors.Secondary,
   ModalLoader_ActivityIndicator: DefaultColors.Primary,
   ModalLoader_Background: DefaultColors.Secondary,
   ModalLoader_Container: "#00000040",
@@ -335,6 +346,8 @@ export const Skin = {
   Post_TimestampLabel: DefaultColors.ColorText,
   PostAttachmentComposePrideraiserMatch_ActivityIndicator:
     DefaultColors.Primary,
+  PostAttachmentExpired_IconColor: DefaultColors.Secondary,
+  PostAttachmentExpired_TextColor: DefaultColors.Secondary,
   PostAttachmentMassTweet_TwitterColor: DefaultColors.Secondary,
   PostAttachmentMultiTweet_TwitterColor: DefaultColors.Secondary,
   PostAttachmentPlayer_InstagramColor: DefaultColors.Secondary,
@@ -400,6 +413,11 @@ export const NavigationDrawerItems = [
     drawerLabel: i18n.t("navigation.links.standings"),
     drawerIcon: "menu-swap",
     url: Urls.Standings,
+  },
+  {
+    drawerLabel: i18n.t("navigation.links.shop"),
+    drawerIcon: "shopping",
+    url: Urls.Shop,
   },
 ];
 
@@ -503,6 +521,12 @@ export const Settings = {
   //      Load this many news feed items, then load this many more if the user scrolls to the bottom
   Home_PostsPerPage: 5,
 
+  // InstagramList_AppendHandles: string
+  //      Extra Instagram handles concatenated after the players on the InstagramList screen
+  //      Each account should be seperated by a space
+  //      In Chattanooga, we append the club and our SG accounts. You can choose to pass.
+  InstagramList_AppendHandles: "",
+
   // Player_ShowSongs: true, false
   //      Some SGs write songs for each player
   //      Toggle a related UI element in the Roster/Player screen
@@ -520,6 +544,11 @@ export const Settings = {
     appJson.expo.slug,
   PostAttachmentComposePrideraiserMatch_AnalyticsSourceDateFormat: "YYYY-MM-DD",
   PostAttachmentComposePrideraiserMatch_AnalyticsSourceSuffix: "",
+
+  // PostAttachmentExpired_Show: true, false
+  //      Toggles rendering of "Attachment expired" message for expired/invalid attachments
+  //      False renders nothing
+  PostAttachmentExpired_Show: true,
 
   // PostCreate_UploadImageEnabled: true, false
   //      Some SGs may not want to pay for image hosting, turn the feature off entirely if so
@@ -560,6 +589,10 @@ export const Settings = {
   //      Matches .competition field of objects from the database foes collection
   //      This field is case sensitive and must match exactly
   RosterFoes_DefaultCompetition: "2020 NISA Spring Showcase",
+
+  // Songbook_IndexNumbers: bool
+  //      If this is set to true, the rows in the songbook are numbered.
+  Songbook_IndexNumbers: true,
 
   // TwitterList_AppendHandles: string
   //      Extra Twitter handles concatenated after the players on the TwitterList screen

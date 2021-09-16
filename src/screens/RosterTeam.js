@@ -14,7 +14,11 @@ import withUnstated from "@airship/with-unstated";
 import GlobalDataContainer from "../containers/GlobalDataContainer";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import FadeIn from "react-native-fade-in-image";
-import { ScrollView, RectButton } from "react-native-gesture-handler";
+import {
+  ScrollView,
+  RectButton,
+  TouchableHighlight,
+} from "react-native-gesture-handler";
 import ModalSelector from "react-native-modal-selector";
 
 import { BoldText, MediumText, RegularText } from "../components/StyledText";
@@ -39,7 +43,7 @@ class PlayerRow extends React.Component {
       twitterDisplay = (
         <TouchableOpacity
           style={{ justifyContent: "flex-start", alignContent: "center" }}
-          key={player.twitter}
+          key={"player-twitter-" + player.twitter}
           onPress={() => {
             openURL(
               "https://twitter.com/intent/tweet?text=@" + player.twitter + "+"
@@ -51,16 +55,39 @@ class PlayerRow extends React.Component {
             size={30}
             style={{
               color: Skin.RosterTeam_TwitterColor,
-              marginTop: 3,
-              marginBottom: 3,
-              marginLeft: 10,
-              marginRight: 10,
+              marginVertical: 3,
+              marginHorizontal: 5,
               backgroundColor: "transparent",
             }}
           />
         </TouchableOpacity>
       );
     }
+
+    let instagramDisplay;
+    if (player.instagram) {
+      instagramDisplay = (
+        <TouchableOpacity
+          style={{ alignContent: "center" }}
+          key={"player-instagram-" + player.instagram}
+          onPress={() => {
+            openURL("https://instagram.com/" + player.instagram);
+          }}
+        >
+          <MaterialCommunityIcons
+            name={"instagram"}
+            size={30}
+            style={{
+              color: Skin.PostAttachmentPlayer_InstagramColor,
+              marginVertical: 3,
+              marginHorizontal: 5,
+              backgroundColor: "transparent",
+            }}
+          />
+        </TouchableOpacity>
+      );
+    }
+
     return (
       <View style={styles.row}>
         <RectButton
@@ -113,6 +140,7 @@ class PlayerRow extends React.Component {
           </View>
         </RectButton>
         {twitterDisplay}
+        {instagramDisplay}
       </View>
     );
   }
@@ -197,7 +225,10 @@ class RosterTeam extends React.Component {
           <ModalSelector
             data={pickerItems}
             selectedKey={this.state.currentRosterID}
-            onChange={(item) => this.setState({ currentRosterID: item.key })}
+            onModalClose={(item) => {
+              if (item.key != this.state.currentRosterID)
+                this.setState({ currentRosterID: item.key });
+            }}
           >
             <View
               style={{
@@ -312,8 +343,11 @@ class RosterTeam extends React.Component {
             onPress={this._handlePressTwitterListButton}
             underlayColor="#fff"
           >
+            <BoldText style={styles.socialListsButtonText}>
+              {i18n.t("screens.rosterteam.sociallists")}
+            </BoldText>
             <MaterialCommunityIcons
-              name="playlist-edit"
+              name="twitter"
               size={23}
               style={{
                 color: "#fff",
@@ -324,9 +358,25 @@ class RosterTeam extends React.Component {
                 backgroundColor: "transparent",
               }}
             />
-            <RegularText style={styles.twitterListButtonText}>
-              {i18n.t("screens.rosterteam.twitterlist")}
-            </RegularText>
+            <TouchableHighlight
+              enabled={this.state.rosters.length > 0}
+              onPress={this._handlePressInstagramListButton}
+              underlayColor="#fff"
+              activeOpacity={0.05}
+            >
+              <MaterialCommunityIcons
+                name="instagram"
+                size={23}
+                style={{
+                  color: "#fff",
+                  marginTop: 3,
+                  marginBottom: 3,
+                  marginLeft: 5,
+                  marginRight: 5,
+                  backgroundColor: "transparent",
+                }}
+              />
+            </TouchableHighlight>
           </RectButton>
         </View>
       </LoadingPlaceholder>
@@ -354,6 +404,13 @@ class RosterTeam extends React.Component {
       (element) => element._id == this.state.currentRosterID
     );
     this.props.navigation.navigate("TwitterList", { roster });
+  };
+
+  _handlePressInstagramListButton = () => {
+    let roster = this.state.rosters.find(
+      (element) => element._id == this.state.currentRosterID
+    );
+    this.props.navigation.navigate("InstagramList", { roster });
   };
 }
 
@@ -391,6 +448,7 @@ const styles = StyleSheet.create({
     backgroundColor: DefaultColors.ButtonBackground,
     paddingHorizontal: 15,
     paddingVertical: 10,
+    paddingBottom: Platform.OS == "ios" ? 15 : 10,
     marginHorizontal: 0,
     width: 100 + "%",
     alignItems: "center",
@@ -398,10 +456,10 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     flexDirection: i18n.getFlexDirection(),
   },
-  twitterListButtonText: {
+  socialListsButtonText: {
+    flex: 1,
     fontSize: FontSizes.normalButton,
     color: "#fff",
-    textAlign: "center",
   },
 });
 

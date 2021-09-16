@@ -6,11 +6,11 @@
     "slug": "louligan-hymnal",
     "privacy": "public",
     "version": "2.1.1",
-    "primaryColor": "#A3D8F7",
+    "primaryColor": "#02631C",
     "icon": "./assets/icon-ios.png",
     "orientation": "portrait",
     "splash": {
-      "backgroundColor": "#A3D8F7",
+      "backgroundColor": "#02631C",
       "resizeMode": "contain",
       "image": "./assets/splash.png"
     },
@@ -29,7 +29,7 @@
     "notification": {
       "icon": "./assets/notification.png",
       "iosDisplayInForeground": true,
-      "color": "#A3D8F7"
+      "color": "#02631C"
     },
     "platforms": ["android", "ios"],
     "githubUrl": "https://github.com/Chattahooligans/",

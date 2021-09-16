@@ -78,6 +78,11 @@ class Player extends React.Component {
     let player = this.props.route.params.player;
     // console.log('player details window for ', player);
 
+    if (!player.bio) {
+      // if player.bio undefined or null, set to empty string to prevent potential crashing when localizing
+      player.bio = "Coming Soon!";
+    }
+    
     let playerSocialDisplay;
     let playerSocialIcons = [];
 
@@ -103,10 +108,8 @@ class Player extends React.Component {
             size={30}
             style={{
               color: "white",
-              marginTop: 3,
-              marginBottom: 3,
-              marginLeft: 10,
-              marginRight: 10,
+              marginVertical: 3,
+              marginHorizontal: 5,
               backgroundColor: "transparent",
             }}
           />
@@ -126,10 +129,8 @@ class Player extends React.Component {
             size={30}
             style={{
               color: "white",
-              marginTop: 3,
-              marginBottom: 3,
-              marginLeft: 10,
-              marginRight: 10,
+              marginVertical: 3,
+              marginHorizontal: 5,
               backgroundColor: "transparent",
             }}
           />
