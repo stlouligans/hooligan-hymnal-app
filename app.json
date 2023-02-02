@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "App Name",
-    "description": "App Description",
+    "name": "St. Louligans",
+    "description": "Our App",
     "owner": "mbwata",
     "slug": "louligan-app",
     "privacy": "public",
-    "version": "2.1.1",
+    "version": "0.0.1",
     "primaryColor": "#02631C",
     "icon": "./assets/icon-ios.png",
     "orientation": "portrait",
