@@ -1,0 +1,31 @@
+{
+  "cli": {
+    "version": ">= 3.5.1"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "m1-medium",
+        "image": "macos-monterey-12.4-xcode-13.4"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "m1-medium",
+        "image": "macos-monterey-12.4-xcode-13.4"
+      }
+    },
+    "production": {
+      "ios": {
+        "resourceClass": "m1-medium",
+        "image": "macos-monterey-12.4-xcode-13.4"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "App Name",
-    "description": "App Description",
+    "name": "St. Louligans",
+    "description": "Our App",
     "owner": "mbwata",
-    "slug": "louligan-hymnal",
+    "slug": "louligan-app",
     "privacy": "public",
-    "version": "2.1.1",
+    "version": "0.0.1",
     "primaryColor": "#02631C",
     "icon": "./assets/icon-ios.png",
     "orientation": "portrait",
@@ -15,23 +15,25 @@
       "image": "./assets/splash.png"
     },
     "android": {
-      "package": "com.example.app",
+      "package": "com.stlouligans.app",
       "icon": "./assets/icon-android.png",
       "versionCode": 1,
       "permissions": [],
       "googleServicesFile": "./google-services.json"
     },
     "ios": {
-      "bundleIdentifier": "com.example.app",
-      "icon": "./assets/icon-ios.png",
-      "loadJSInBackgroundExperimental": true
+      "bundleIdentifier": "com.stlouligans.app",
+      "icon": "./assets/icon-ios.png"
     },
     "notification": {
       "icon": "./assets/notification.png",
       "iosDisplayInForeground": true,
       "color": "#02631C"
     },
-    "platforms": ["android", "ios"],
+    "platforms": [
+      "android",
+      "ios"
+    ],
     "githubUrl": "https://github.com/Chattahooligans/",
     "extra": {
       "hooliganHymnal": {
@@ -39,6 +41,9 @@
         "aboutPlug": {
           "en": " is built using the open source *Hooligan Hymnal* platform, v2.1.1.\n\nFollow _@hooliganhymnal_ on Twitter and visit the project repository at https://github.com/Chattahooligans"
         }
+      },
+      "eas": {
+        "projectId": "4bef475d-a131-41a3-8f20-b045b441a7bb"
       }
     }
   }
