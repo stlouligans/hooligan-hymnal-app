@@ -5,7 +5,7 @@
     "owner": "mbwata",
     "slug": "louligan-app",
     "privacy": "public",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "primaryColor": "#02631C",
     "icon": "./assets/icon-ios.png",
     "orientation": "portrait",
@@ -37,7 +37,7 @@
     "githubUrl": "https://github.com/Chattahooligans/",
     "extra": {
       "hooliganHymnal": {
-        "version": "0.0.1",
+        "version": "0.0.3",
         "aboutPlug": {
           "en": " is built using the open source *Hooligan Hymnal* platform, v2.1.1.\n\nFollow _@hooliganhymnal_ on Twitter and visit the project repository at https://github.com/Chattahooligans"
         }
