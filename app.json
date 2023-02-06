@@ -6,11 +6,11 @@
     "slug": "louligan-app",
     "privacy": "public",
     "version": "0.0.3",
-    "primaryColor": "#02631C",
+    "primaryColor": "#E51550",
     "icon": "./assets/icon-ios.png",
     "orientation": "portrait",
     "splash": {
-      "backgroundColor": "#02631C",
+      "backgroundColor": "#DD1D4D",
       "resizeMode": "contain",
       "image": "./assets/splash.png"
     },
