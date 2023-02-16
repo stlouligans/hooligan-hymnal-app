@@ -49,7 +49,7 @@ export const Urls = {
   // Social media and websites
   Twitter: "https://twitter.com/StLouligans",
   Facebook: "https://www.facebook.com/stlouligans",
-  Instagram: "https://instagram.com/stlouligans",
+  Instagram: "https://www.instagram.com/stlouligans",
   Website: "https://stlouligans.com",
   YouTube: "https://youtube.com",
   Shop: "https://stlouligans.com/shop",
