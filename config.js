@@ -487,15 +487,15 @@ export const SocialButtons = [
       },
     ],
   },
-  {
-    header: i18n.t("settings.socialES"),
-    headerColor: DefaultColors.ColorText,
-    items: [
-      { url: Urls.EsTwitter, icon: "twitter" },
-      { url: Urls.EsInstagram, icon: "instagram" },
-      { url: Urls.EsWebsite, icon: "link" },
-    ],
-  },
+  // {
+  //   header: i18n.t("settings.socialES"),
+  //   headerColor: DefaultColors.ColorText,
+  //   items: [
+  //     { url: Urls.EsTwitter, icon: "twitter" },
+  //     { url: Urls.EsInstagram, icon: "instagram" },
+  //     { url: Urls.EsWebsite, icon: "link" },
+  //   ],
+  // },
 ];
 // Other/Seasonal
 // { url: Urls.Website, icon: 'link' },
