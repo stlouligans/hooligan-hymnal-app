@@ -31,12 +31,11 @@
       "feedback": "Please send feedback to app@stlouligans.com",
       "creditsheading": "Credits",
       "credits": [
-        "This app was built using the Hooligan Hymnal framework developed by The Chattahooligans",
+        "- This app was built using the Hooligan Hymnal framework developed by The Chattahooligans",
         "",
-        "The backend is hosted in AWS and managed by Sketch Development Services. For help managing your cloud visit https://www.sketchdev.io/cloud-management",
-        
+        "- The backend is hosted in AWS and managed by Sketch Development Services. For help managing your cloud visit https://www.sketchdev.io/cloud-management",
         "",
-        "Open Sans font is used under Apache License, version 2.0"
+        "- Open Sans font is used under Apache License, version 2.0"
       ],
       "debug": "Debug"
     },
