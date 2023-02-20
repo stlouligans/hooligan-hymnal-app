@@ -25,17 +25,18 @@
       ],
 
       "title": "About",
-      "appTitle": "SG Hooligan Hymnal App Name",
+      "appTitle": "St. Louligans: The App",
       "version": "v",
-      "description": "Tagline describing the app",
-      "feedback": "Please send feedback to _@YOUR-SG/DEVELOPER-ACCOUNT_ or _@hooliganhymnal_ on Twitter, or email YOUR-SG/DEVELOPER-ACCOUNT and hooliganhymnal@gmail.com",
+      "description": "The news and notes needed for your gameday",
+      "feedback": "Please send feedback to app@stlouligans.com",
       "creditsheading": "Credits",
       "credits": [
-        "- This section is an array. Each element has a comma at the end",
-        "- It can be used to credit those who hymnalplugd photos",
-        "- Or created digital graphics, or to discuss a font license",
-        "- The last element doesn't have a comma after the closing quote",
-        "- Open Sans font is used under Apache License, version 2.0"
+        "This app was built using the Hooligan Hymnal framework developed by The Chattahooligans",
+        "",
+        "The backend is hosted in AWS and managed by Sketch Development Services. For help managing your cloud visit https://www.sketchdev.io/cloud-management",
+        
+        "",
+        "Open Sans font is used under Apache License, version 2.0"
       ],
       "debug": "Debug"
     },
