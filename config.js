@@ -42,7 +42,7 @@ export const Urls = {
   // production server
   // HEY! Don't include a trailing slash / on this url.
   // If you do, you're gonna have a bad time because your serer calls will not work
-  HooliganHymnalServer: "http://34.228.224.146:3000",
+  HooliganHymnalServer: "https://stlouligans-hymnal.stlouligans.sketchdev.io",
   // dev/beta server
   //HooliganHymnalServer: 'https://EDIT-THIS-URL.herokuapp.com',
 
