@@ -18,8 +18,7 @@
       "package": "com.stlouligans.app",
       "icon": "./assets/icon-android.png",
       "versionCode": 1,
-      "permissions": [],
-      "googleServicesFile": "./google-services.json"
+      "permissions": []
     },
     "ios": {
       "bundleIdentifier": "com.stlouligans.app",
@@ -45,6 +44,19 @@
       "eas": {
         "projectId": "4bef475d-a131-41a3-8f20-b045b441a7bb"
       }
-    }
+    },
+
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 31,
+            "targetSdkVersion": 31,
+            "buildToolsVersion": "31.0.0"
+          }
+        }
+      ]
+    ]
   }
 }
