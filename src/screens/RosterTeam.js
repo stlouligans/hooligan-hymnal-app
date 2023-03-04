@@ -43,7 +43,7 @@ class PlayerRow extends React.Component {
           key={"player-twitter-" + player.twitter}
           onPress={() => {
             openURL(
-              "https://twitter.com/intent/tweet?text=@" + player.twitter + "+"
+              "http://twitter.com/" + player.twitter
             );
           }}
         >
