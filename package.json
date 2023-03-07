@@ -24,7 +24,7 @@
     "axios": "^0.21.1",
     "expo": "^45.0.0",
     "expo-asset": "^8.5.0",
-    "expo-av": "~9.1.2",
+    "expo-av": "^11.2.3",
     "expo-build-properties": "~0.2.0",
     "expo-cli": "^3.4.0",
     "expo-constants": "~10.1.3",
