@@ -34,7 +34,7 @@
     "expo-image-picker": "~10.1.4",
     "expo-localization": "~10.1.0",
     "expo-location": "~12.0.4",
-    "expo-modules-autolinking": "^1.0.2",
+    "expo-modules-autolinking": "^0.8.1",
     "expo-notifications": "~0.11.6",
     "expo-permissions": "~12.0.1",
     "expo-sharing": "~9.1.2",
