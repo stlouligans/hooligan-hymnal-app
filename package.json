@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@airship/with-unstated": "^1.0.1",
+    "@react-native-async-storage/async-storage": "~1.15.0",
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/bottom-tabs": "^5.5.2",
     "@react-navigation/drawer": "^5.7.7",
@@ -45,7 +46,7 @@
     "moment-timezone": "^0.5.26",
     "ramda": "^0.25.0",
     "react": "17.0.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-44.0.0.tar.gz",
+    "react-native": "^0.64.3",
     "react-native-animatable": "^1.3.2",
     "react-native-draggable-flatlist": "^2.3.3",
     "react-native-fade-in-image": "1.3.0",
@@ -57,15 +58,14 @@
     "react-native-parsed-text": "0.0.21",
     "react-native-popup-menu": "^0.15.6",
     "react-native-read-more-text": "^1.0.0",
+    "react-native-reanimated": "~2.3.1",
     "react-native-resource-saving-container": "^1.0.2",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.10.1",
     "react-native-simple-toast": "^1.0.0",
     "react-native-tab-view": "^2.7.0",
     "react-native-tiny-toast": "^1.0.6",
-    "unstated": "^2.1.1",
-    "@react-native-async-storage/async-storage": "~1.15.0",
-    "react-native-reanimated": "~2.3.1"
+    "unstated": "^2.1.1"
   },
   "devDependencies": {
     "babel-preset-react-native": "^4.0.1",
